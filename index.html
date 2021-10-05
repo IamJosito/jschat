@@ -12,9 +12,8 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     let socket = io();
-    socket.emit("msg", "Hola");
     socket.on("usersConected", data => {
-      document.getElementById("msg").innerHTML = data;
+      document.getElementById("msg").innerHTML = `Usuarios conectados: ${data}`;
     })
   </script>
 </html>
