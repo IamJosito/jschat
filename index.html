@@ -8,12 +8,24 @@
   </head>
   <body>
     <div id="msg"></div>
+    <input type="text" name="" id="message">
+    <input type="button" value="Enviar" onclick="sendMessage()">
+    <div id="chat"></div>
   </body>
   <script src="/socket.io/socket.io.js"></script>
   <script>
     let socket = io();
     socket.on("usersConected", data => {
       document.getElementById("msg").innerHTML = `Usuarios conectados: ${data}`;
+    })
+
+    function sendMessage(){
+      const messageInput = document.getElementById("message");
+      socket.emit("sendMessage", messageInput.value);
+    }
+
+    socket.on("retrieveMessage", message => {
+      document.getElementById("chat").innerHTML += message + "<br>";
     })
   </script>
 </html>
