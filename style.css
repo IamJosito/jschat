@@ -1,0 +1,58 @@
+body{
+    background-color: #1C1C1C;
+}
+
+.contactBar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1pt;
+    border-bottom-color: #464646;
+}
+
+#contactImg{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+    background-color: #BD00FF;
+}
+
+
+#msg{
+    position:absolute; 
+    top:0; 
+    right:0;
+}
+
+#message{
+    position: absolute;
+    left:1%;
+    top: 90%;
+    width: 93%;
+    height: 35px;
+
+    border-radius: 20px;
+
+}
+
+#sendMsg{
+    position: absolute;
+    top: 91%;
+    right: 1%;
+
+}
+
+
+#chat{
+    position: absolute;
+    top:80%;
+    right:10%;
+}

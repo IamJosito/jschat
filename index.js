@@ -1,11 +1,16 @@
 const express = require("express");
 const app = express();
 const http = require("http");
+const { nextTick } = require("process");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 let userConected = [];
 let messages = [];
+
+var path = require('path');
+
+app.use(express.static(path.join(__dirname, '/')));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
